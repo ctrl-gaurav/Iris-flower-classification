@@ -7,11 +7,14 @@ from tensorflow.keras.models import load_model
 import joblib
 import numpy as np
 
+# loading trained model
+
 flower_model=load_model('final_iris_model.h5')
 flower_scaler=joblib.load("iris_scaler.pkl")
 
+# script to take 4 parameters as input and return predicted result 
+
 def return_prediction(model,scaler,sample_json):
-    
     
     s_len=sample_json["sepal_length"]
     s_wid=sample_json["sepal_width"]
@@ -27,9 +30,12 @@ def return_prediction(model,scaler,sample_json):
     return classes[class_ind]
 
 
+# initializing flask application
 
 app=Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecretkey'
+
+# creating a flask form class 
 
 class FlowerForm(FlaskForm) :
     
@@ -40,6 +46,8 @@ class FlowerForm(FlaskForm) :
 
     submit = SubmitField("Analyze")
 
+
+# creating home page route 
 
 @app.route("/",methods=['GET','POST'])
 def index():
@@ -58,6 +66,8 @@ def index():
 
 flower_model=load_model("final_iris_model.h5")
 flower_scaler=joblib.load("iris_scaler.pkl")
+
+# creating result page route 
 
 @app.route('/prediction')
 def prediction():
