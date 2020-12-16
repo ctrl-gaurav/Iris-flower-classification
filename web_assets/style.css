@@ -1,0 +1,53 @@
+*{
+    /* background-color: black;
+    color: aliceblue ; */
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 2px ;
+}
+
+h1{
+    font-size: 70px ;
+    color: yellowgreen;
+    text-align: center;
+}
+
+h3{
+    margin-bottom: 2% ;
+}
+
+.form-1{
+    /* display: flexbox; */
+    /* align-items: center ; */
+    text-align: center;
+    margin: 7% 10% ;  
+    font-size: 1.8em;
+}
+.ipt{
+    
+    margin: 50% 3% ;
+    /* border: 1px solid ; */
+}
+input{
+    border: 2px solid lightgreen ;
+    border-radius: 20px ;
+    height: 30px ;
+    width: 12%;
+    text-align: center;
+    margin-bottom: 20px ;
+    /* background-color: bisque ; */
+
+}
+
+
+.btn-submit{
+    margin-top: 2%;
+    width: 10% ;
+    height: 40px;
+    border : 2px solid black ;
+    border-radius: 20px;
+    /* color: white; */
+    background-color: chartreuse ;
+}
+.btn-submit:hover{
+    
+}
