@@ -1,3 +1,2 @@
 # Iris-flower-classification
-
-## Forked branch waiting to be merged.
+## Basic Site ready with vanilla HTML and CSS.
