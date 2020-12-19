@@ -1,7 +1,10 @@
 Flask==1.1.1
 gunicorn==19.9.0
 Jinja2==2.10.1
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.0
 MarkupSafe==1.1.1
+tensorflow==2.0.0
 Werkzeug==0.15.5
 numpy>=1.9.2
 scipy>=0.15.1
