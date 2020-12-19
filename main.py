@@ -21,13 +21,7 @@ def formAction():
     
     if request.method =='POST':
         values = request.form
-        content={}
-        content['sepal_length'] = float(values.get("sLength")) 
-        content['sepal_width'] = float(values.get("sWidth"))
-        content['petal_length'] = float(values.get("pLength"))
-        content['petal_width'] = float(values.get("pWidth"))
-
-        results = return_prediction(flower_model,flower_scaler,content) #stores the predicted flower name in results var
+        results = return_prediction(flower_model,flower_scaler,values) #stores the predicted flower name in results var
         return render_template('index.html', result = results) #return to the index page with results placeholder changed to the predicted name
 
     return render_template("index.html", result = "An error occured try again")
@@ -35,10 +29,10 @@ def formAction():
 # func to predit the flower from the values got from form and returning the predicted flower name
 def return_prediction(model,scaler,sample_json):
     
-    s_len=sample_json["sepal_length"]
-    s_wid=sample_json["sepal_width"]
-    p_len=sample_json["petal_length"]
-    p_wid=sample_json["petal_width"]
+    s_len=sample_json["sLength"]
+    s_wid=sample_json["sWidth"]
+    p_len=sample_json["pLength"]
+    p_wid=sample_json["pWidth"]
     
     flower=[[s_len,s_wid,p_len,p_wid]]
     
