@@ -30,3 +30,4 @@ print(model.predict(final))
 print(b)
 
 pickle.dump(model,open('model.pkl','wb'))
+model=pickle.load(open('model.pkl','rb'))
