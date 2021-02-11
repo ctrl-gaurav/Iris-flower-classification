@@ -18,7 +18,7 @@ test_X = test[['Sepal.Length', 'Sepal.Width', 'Petal.Length','Petal.Width']]
 test_y = test.Species
 
 model = GaussianNB()
-model.fit(train_X,train_y)
+model.fit(train_X,train_y) 
 
 
 inputt=[float(x) for x in "5.9 3.0 5.1 1.8".split(' ')]
@@ -27,17 +27,6 @@ final=[np.array(inputt)]
 b = model.predict_proba(final)
 
 print(model.predict(final))
+print(b)
 
 pickle.dump(model,open('model.pkl','wb'))
-model=pickle.load(open('model.pkl','rb'))
-
-
-# flower_example = {"Sepal_Length":5.9,"Sepal_Width":3,"Petal_Length":5.1,"Petal_Width":1.8}
-# s_len=flower_example["Sepal_Length"]
-# s_wid=flower_example["Sepal_Width"]
-# p_len=flower_example["Petal_Length"]
-# p_wid=flower_example["Petal_Width"]
-# flower=[[s_len,s_wid,p_len,p_wid]]
-
-# model.predict(flower)
-# print(model.predict(flower))
