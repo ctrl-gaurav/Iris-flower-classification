@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}">
-    <link rel="icon" href="data:,">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-    
-    <title>Iris Flower detection</title>
+  <link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}" />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet" />
+
+  <title>Iris Flower detection</title>
 </head>
+
 <body>
-    <h1>Iris Flower Detection</h1>
-    <div class="form-1">
-        <h3>Enter the flower measurements</h3>
+  <h1>Iris Flower Detection</h1>
+  <div class="form-1">
+    <h3>Enter the flower measurements</h3>
 
-        <form action="\form_action" method="POST">
-            <span class = "ipt">
-                <label for="sLength">
-                    Sepal Length : <input id="sLength" type="number" step="0.1" name="sLength"  placeholder="Sepal length" required>
-                </label> 
-            </span>
+    <form action="\form_action" method="POST">
+      <span class="ipt">
+        <label for="sLength">
+          Sepal Length :
+          <input id="sLength" type="number" step="0.1" name="sLength" placeholder="Sepal length" required />
+        </label>
+      </span>
 
-            <span class = "ipt">
-                <label for="sWidth">
-                    Sepal width : <input id="sWidth" type="number" step="0.1" name="sWidth" placeholder="Sepal width" required>
-                </label> 
-            </span>
+      <span class="ipt">
+        <label for="sWidth">
+          Sepal width :
+          <input id="sWidth" type="number" step="0.1" name="sWidth" placeholder="Sepal width" required />
+        </label>
+      </span>
 
-            <br>
+      <br />
 
-            <span class = "ipt">
-                <label for="pLength">
-                    Petal Length : <input id="pLength" type="number" step="0.1" name="pLength" placeholder="Petal Length"required>
-                </label> 
-            </span>
+      <span class="ipt">
+        <label for="pLength">
+          Petal Length :
+          <input id="pLength" type="number" step="0.1" name="pLength" placeholder="Petal Length" required />
+        </label>
+      </span>
 
-            <span class = "ipt">
-                <label for="pWidth">
-                    Petal width : <input id="pWidth" type="number" step="0.1" name="pWidth" placeholder="Petal width"  required>
-                </label>
-            </span>   
+      <span class="ipt">
+        <label for="pWidth">
+          Petal width :
+          <input id="pWidth" type="number" step="0.1" name="pWidth" placeholder="Petal width" required />
+        </label>
+      </span>
 
-            <br>         
-            <input class ="btn-submit" type="submit" value="Submit" name="submit">
-        </form>
-    </div>
-    <div class="result">  {{result}} </div>
-    <div>made with ❤ by its_gk</div>
-    
-
+      <br />
+      <input class="btn-submit" type="submit" value="Submit" name="submit" />
+    </form>
+  </div>
+  <div class="result">{{result}}</div>
+  <div>made with ❤ by <a href ="https://github.com/SimplyyShubh">simplyyshubh</a> and <a href="https://github.com/ctrl-gaurav">its_gk</a></div>
 </body>
+
 </html>
