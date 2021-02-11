@@ -1,4 +1,4 @@
-# [Iris-flower-classification] (https://my-iris-flower.herokuapp.com/)
+# [Iris-flower-classification](https://my-iris-flower.herokuapp.com/)
 
 ![Screenshot of Index Page](/static/ScreenshotIndex.jpg)
 
